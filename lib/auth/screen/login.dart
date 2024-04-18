@@ -87,7 +87,6 @@ class _LoginScreenState extends State<LoginScreen> {
           ),
           Center(
             child: Container(
-
               child: Lottie.asset(
                 'assets/lottie_animation/5.json',
                 width: 300,

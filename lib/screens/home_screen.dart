@@ -6,6 +6,7 @@ import 'package:my_chat/helper/dialog.dart';
 import 'package:my_chat/main.dart';
 import 'package:my_chat/models/chat_user_model.dart';
 import 'package:my_chat/profile/profile_screen.dart';
+import 'package:my_chat/screens/call/call_page.dart';
 import 'package:my_chat/screens/widget/chat_user_card.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -65,6 +66,7 @@ class _HomeScreenState extends State<HomeScreen> {
         },
         child: Scaffold(
           appBar: AppBar(
+            centerTitle: false,
             title: _isSearching
                 ? TextField(
                     decoration: InputDecoration(
@@ -97,6 +99,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   },
                   icon: Icon(
                       _isSearching ? Icons.cancel_outlined : Icons.search)),
+
               IconButton(
                   onPressed: () {
                     Navigator.push(

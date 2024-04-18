@@ -12,6 +12,7 @@ import 'package:my_chat/helper/my_date_util.dart';
 import 'package:my_chat/main.dart';
 import 'package:my_chat/models/chat_user_model.dart';
 import 'package:my_chat/profile/view_profile_screen.dart';
+import 'package:my_chat/screens/call/call_page.dart';
 
 class ChatScreen extends StatefulWidget {
   final ChatUserModel user;
@@ -29,6 +30,7 @@ class _ChatScreenState extends State<ChatScreen> {
   bool _showEmoji = false, _isUploading = false;
   @override
   Widget build(BuildContext context) {
+    String callerId = widget.user.id;
     return GestureDetector(
       onTap: () {
         FocusScope.of(context).unfocus();
@@ -49,6 +51,19 @@ class _ChatScreenState extends State<ChatScreen> {
             appBar: AppBar(
               automaticallyImplyLeading: false,
               flexibleSpace: _appbar(),
+              actions: [
+                IconButton(
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => CallPage(
+                                    userId: widget.user.id,
+                                    userName: widget.user.name,
+                                  )));
+                    },
+                    icon: Icon(Icons.videocam_outlined)),
+              ],
             ),
             backgroundColor: Color(0xEADBE8F8),
             body: Column(
@@ -185,7 +200,7 @@ class _ChatScreenState extends State<ChatScreen> {
                         ],
                       )
                     ],
-                  )
+                  ),
                 ],
               );
             }));

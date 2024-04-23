@@ -4,6 +4,10 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+    <string>Chatting app needs access to your photo library to select images.</string>
+    <key>NSCameraUsageDescription</key>
+    <string>Your app needs access to your camera to take photos.</string>
 	<key>CFBundleDisplayName</key>
 	<string>My Chat</string>
 	<key>CFBundleExecutable</key>

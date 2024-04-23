@@ -179,7 +179,7 @@ class Apis {
         whereIn: userIds.isEmpty
             ? ['']
             : userIds) //because empty list throws an error
-    // .where('id', isNotEqualTo: user.uid)
+    .where('id', isNotEqualTo: user.uid)
         .snapshots();
   }
 

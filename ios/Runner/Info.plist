@@ -69,8 +69,9 @@
     <string>App requires access to the photo library for picking picture</string>
     <key>NSCameraUsageDescription </key>
     <string>App requires access to the camera for taking picture</string>
-    <key>NSMicrophoneUsageDescription </key>
-    <string>App requires access to the microphone for record video</string>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>This app requires access to your microphone to enable video calling functionality. The microphone is used to capture your voice during video calls, allowing you to communicate with other users in real-time. Your privacy and security are important to us, and we will not access your microphone without your explicit permission.</string>
+
     <!-- for storing image into gallery -->
 
 </dict>
